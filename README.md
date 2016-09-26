@@ -11,7 +11,7 @@ There are currently 37 measures/metrics in TasKar lightweight version. TasKar Pr
 
 I hope that TasKar (even lightweight version provided here) becomes a standard tool for calculating and expressing binary classification performances.
 
-Please, contact me for further usage on TasKar (Lightweight or Pro version).
+Please, contact me for further usage on TasKar (Lightweight or Pro version). See Wiki for more information at https://github.com/gurol/taskar/wiki
 
 Gürol Canbek
 September 26th, 2016
