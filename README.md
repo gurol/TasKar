@@ -1,5 +1,5 @@
 # taskar
-TasKar – Binary Classification Performance Metrics Card
+TasKar – Binary Classification Performance Instruments Calculator/Dashboard
 
 Classification performance, which is very important in machine learning, states the success state of a classifier implementing a specific algorithm. Binary classifications or two-class classifications separate a given input into two opposite classes such as 'presence' vs. 'absence' of a disease (healthy) or a condition, 'spam' vs. 'non-spam' for an e-mail, and 'malign' vs. 'benign' software.
 
@@ -20,3 +20,4 @@ NOTES:
 1) TasKar is prepared as a OpenDocument Spreadsheet file and tested with LibreOffice Calc (v5.1.5.2).
 2) Please, cite my study if you use TasKar in your academic studies as
    Gürol Canbek, "TasKar, Binary Classification Performance Metrics Card", September 26th, 2016, https://github.com/gurol/taskar
+3) An academical study is being prepared and about to submit. Please, check this repository for updates and the references. 
