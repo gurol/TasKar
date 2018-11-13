@@ -15,7 +15,7 @@ TasKar calculates and shows 56 measures/metrics.
 
 I hope that TasKar becomes a standard tool for calculating and expressing binary classification performances as well as using in machine learning education and trainings.
 
-Please, contact and/or inform me for further usage on TasKar. See Wiki for more information at https://github.com/gurol/taskar/wiki/Home-%7C-TasKar-%E2%80%93-Binary-Classification-Performance-Metrics-Card
+Please, contact and/or inform me for further usage on TasKar.
 
 Gürol Canbek
 October 13th, 2018
