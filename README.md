@@ -7,11 +7,11 @@ TasKar is a handy visually supported compact calculator to see the performance o
 
 Just input the four measures (***TP***, ***TN***, ***FP***, ***FN***) and TasKar calculates the entire performance measures and metrics.
 
-There are currently 37 measures/metrics in TasKar lightweight version. TasKar Pro has 56 measures/metrics.
+TasKar calculates and shows 56 measures/metrics.
 
-I hope that TasKar (even lightweight version provided here) becomes a standard tool for calculating and expressing binary classification performances as well as using in machine learning education and trainings.
+I hope that TasKar becomes a standard tool for calculating and expressing binary classification performances as well as using in machine learning education and trainings.
 
-Please, contact me for further usage on TasKar (Lightweight or Pro version). See Wiki for more information at https://github.com/gurol/taskar/wiki/Home-%7C-TasKar-%E2%80%93-Binary-Classification-Performance-Metrics-Card
+Please, contact and/or inform me for further usage on TasKar. See Wiki for more information at https://github.com/gurol/taskar/wiki/Home-%7C-TasKar-%E2%80%93-Binary-Classification-Performance-Metrics-Card
 
 Gürol Canbek
 October 13th, 2018
