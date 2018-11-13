@@ -1,6 +1,8 @@
 # TasKar
 TasKar – Binary Classification Performance Instruments Dashboard/Calculator/Visualizer
 
+![TasKar](https://github.com/gurol/taskar/TasKarLogo512x512.png)
+
 Classification performance, which is very important in machine learning, states the success state of a classifier implementing a specific algorithm. Binary classifications or two-class classifications separate a given input into two opposite classes such as 'presence' vs. 'absence' of a disease (healthy) or a condition, 'spam' vs. 'non-spam' for an e-mail, and 'malign' vs. 'benign' software.
 
 TasKar is a handy visually supported compact calculator to see the performance of a given binary classification by entering only the True Positives (***TP***), True Negatives (***TN***), False Positives (***FP***), and False Negatives (***FN***). It is based on an academical study given in the notes below.
