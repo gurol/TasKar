@@ -1,8 +1,4 @@
 theme: jekyll-theme-minimal
-
-# --- General options --- #
 url: "https://gurol.github.io"
 baseurl: ""
-
-# --- Navigation bar options --- #
 title-img: "/images/TasKarLogo512x512.png"
