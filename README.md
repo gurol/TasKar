@@ -13,7 +13,7 @@ TasKar is a handy visually supported compact calculator to see the performance o
 
 Just input the four measures (***TP***, ***TN***, ***FP***, ***FN***) and TasKar calculates the entire performance measures and metrics.
 
-TasKar calculates and shows 56 measures/metrics.
+TasKar calculates and shows 56 measures/metrics including True Positive Rate (*TPR*), Accuracy (*ACC*), Balanced Accuracy (*BACC*), G, F1, Normalized Mutual Information (*nMI*), Cohen's Kappa (*CK*), and Mathews Correlation Coefficient (*MCC*).
 
 I hope that TasKar becomes a standard tool for calculating and expressing binary classification performances as well as using in machine learning education and trainings.
 
@@ -27,4 +27,4 @@ NOTES:
 2) Please, cite our study if you use TasKar in your academic studies as
    Gürol Canbek, Seref Sagiroglu, and Tugba Taskaya Temizel, "New Means of Calculation and Representation of The Entire Binary-Classification Performance Instruments", IEEE Computational Intelligence Magazine (CIM), (Submitted), November 2018, https://github.com/gurol/taskar
 3) Please, check this repository for updates and the references.
-4) See also: G. Canbek, S. Sagiroglu, T. T. Temizel, and N. Baykal, “Binary classification performance measures/metrics: A comprehensive visualized roadmap to gain new insights,” in 2017 International Conference on Computer Science and Engineering (UBMK), Antalya: IEEE, 2017, pp. 821–826.
+4) See also: G. Canbek, S. Sagiroglu, T. T. Temizel, and N. Baykal, “Binary classification performance measures/metrics: A comprehensive visualized roadmap to gain new insights,” in 2017 International Conference on Computer Science and Engineering (UBMK), Antalya: IEEE, 2017, pp. 821–826. [Full Text](https://www.researchgate.net/publication/320829355_Binary_Classification_Performance_MeasuresMetrics_A_comprehensive_visualized_roadmap_to_gain_new_insights)
