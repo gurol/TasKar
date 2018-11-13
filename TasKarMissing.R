@@ -2,6 +2,7 @@
 #' @author Gürol Canbek, <gurol44@gmail.com>  
 #' Copyright (C) 2017-2018 Gürol CANBEK  
 #' This file is licensed under
+#' 
 #'   A p a c h e   L i c e n s e   2 . 0 
 #' 
 #' A permissive license whose main conditions require preservation of copyright
@@ -13,23 +14,119 @@
 #' @references <http://gurol.canbek.com>  
 #' @keywords utilities, common functions  
 #' @title Missing Metrics Revealer
-#' @version 1.1  
-#' @note version history  
-#' 1.1, 26 March 2018, Batch processing  
-#' 1.0, 19 February 2017, The first version  
+#' @version 1.2  
 #' @description R functions for calculating confusion matrix (base measures)
 #' from given performance instruments (e.g. P, N, TPR, and ACC) as well as
-#' initializing global confusion matrix by given instruments.   
-#' @date 26 March 2018  
-#' @details 
-#' Known issues: Calculated Sn may be bigger than the original one
-#' Workaround:  Correct the base measures manually
-#' FIX THERE:
-#' round(TP, 0) + round(FN, 0) + 1 == P => TP <<- ceil(TP), FN <<- ceil(FN)
-#' round(TN, 0) + round(FP, 0) + 1 == N => TN <<- ceil(TN), FP <<- ceil(FP)
+#' initializing global confusion matrix by given instruments.  
+#' @note version history  
+#' 1.2, 13 November 2018, Converting calculated base measures into integer  
+#' 1.1, 26 March 2018, Batch processing  
+#' 1.0, 19 February 2017, The first version  
+#' @date 13 November 2018  
 
 #' libraries  
 # None
+
+#' ### integerClassBaseMeasures
+#' Convert the base measures of a single class into integer.  
+#' **Parameters:**  
+#' *fTrueClass*: Calculated float True-Class value (TP or TN)  
+#' *fFalseOtherClass*: Calculated float False-Other-Class value (FN or FP)  
+#' *dClass*: Given (actual) class size (P or N)  
+#' **Return:**  
+#' A vector first element integer True-Class and integer False-Other-Class value  
+#' **Example Usage:** 
+# int_values <- integerClassBaseMeasures(12.25, 12.75, 25)
+integerClassBaseMeasures <- function(fTrueClass, fFalseOtherClass, dClass)
+{
+  tTrueClass <- trunc(fTrueClass)
+  tFalseOtherClass <- trunc(fFalseOtherClass)
+  tClass <- tTrueClass + tFalseOtherClass
+  
+  delta <- dClass - tClass
+  
+  if (delta == 0) {
+    return (c(tTrueClass, tFalseOtherClass))
+  }
+  
+  if (delta == 2) {
+    # Increase truncated values
+    return (c(tTrueClass+1, tFalseOtherClass+1))
+  }
+  
+  if (delta == -2) {
+    # Decreas truncated values
+    return (c(tTrueClass-1, tFalseOtherClass-1))
+  }
+  
+  frTrueClass <- fTrueClass - tTrueClass
+  frFalseOtherClass <- fFalseOtherClass - tFalseOtherClass
+  
+  if (delta == 1) {
+    # Increase truncated values
+    if (frTrueClass >= 0.5 && frFalseOtherClass >= 0.5) {
+      if (frTrueClass > frFalseOtherClass) {
+        return (c(tTrueClass+1, tFalseOtherClass))
+      }
+      
+      if (frTrueClass < frFalseOtherClass) {
+        return (c(tTrueClass, tFalseOtherClass+1))
+      }
+      
+      if (tTrueClass > tFalseOtherClass) {
+        return (c(tTrueClass+1, tFalseOtherClass))
+      }
+      
+      return (c(tTrueClass, tFalseOtherClass+1))
+    }
+    
+    if (frTrueClass >= 0.5) {
+      return (c(tTrueClass+1, tFalseOtherClass))
+    }
+    
+    if (frFalseOtherClass >= 0.5) {
+      return (c(tTrueClass, tFalseOtherClass + 1))
+    }
+    
+    if (tTrueClass > tFalseOtherClass) {
+      return (c(tTrueClass+1, tFalseOtherClass))
+    }
+    
+    return (c(tTrueClass, tFalseOtherClass+1))
+  }
+  
+  
+  # Delta = -1, Decrease truncated values
+  if (frTrueClass >= 0.5 && frFalseOtherClass >= 0.5) {
+    if (frTrueClass > frFalseOtherClass) {
+      return (c(tTrueClass-1, tFalseOtherClass))
+    }
+    
+    if (frTrueClass < frFalseOtherClass) {
+      return (c(tTrueClass, tFalseOtherClass-1))
+    }
+    
+    if (tTrueClass > tFalseOtherClass) {
+      return (c(tTrueClass-1, tFalseOtherClass))
+    }
+    
+    return (c(tTrueClass, tFalseOtherClass-1))
+  }
+  
+  if (frTrueClass >= 0.5) {
+    return (c(tTrueClass-1, tFalseOtherClass))
+  }
+  
+  if (frFalseOtherClass >= 0.5) {
+    return (c(tTrueClass, tFalseOtherClass-1))
+  }
+  
+  if (tTrueClass > tFalseOtherClass) {
+    return (c(tTrueClass-1, tFalseOtherClass))
+  }
+  
+  return (c(tTrueClass, tFalseOtherClass-1))
+}
 
 #' ### getMeasuresViaP_TPR_FPR_ACC
 #' Reveal base measures (TP, FP, FN, TN) and Sn from P, TPR, FPR, ACC  
@@ -611,19 +708,63 @@ addStudyBaseMeasures <- function(bm, study, config, inputs,
     reported_metrics <- removeNaColumns(reported_metrics)
     ReportedMetrics[new_study] <<-
       paste(colnames(reported_metrics), collapse=', ')
+    reported_metric_values <- as.numeric(reported_metrics[1, ])
     ReportedMetricValues[new_study] <<-
       paste(colnames(reported_metrics),
-            round(as.numeric(reported_metrics[1, ]), 4),
+            round(reported_metric_values, 4),
             sep=':', collapse=', ')
+    
+    has_negative_performance <- any(c('FPR', 'FNR', 'FDR', 'FOR', 'MCR')
+                                        %in% names(reported_metrics))
+    if (has_negative_performance) {
+      reported_metric_values.positive <- as.numeric(
+        reported_metrics[1,
+                         -which(names(reported_metrics) %in%
+                                  c('FPR', 'FNR', 'FDR', 'FOR', 'MCR'))])
+      reported_metric_values.negative <- 1 - as.numeric(
+        reported_metrics[1,
+                         which(names(reported_metrics) %in%
+                                 c('FPR', 'FNR', 'FDR', 'FOR', 'MCR'))])
+    }
+    else {
+      reported_metric_values.positive <- as.numeric(reported_metrics[1, ])
+      reported_metric_values.negative <- NA
+    }
+    
+    AverageReportedMetricValues[new_study] <<- mean(
+      c(reported_metric_values.positive, reported_metric_values.negative),
+      na.rm=TRUE)
+    MaxReportedMetricValues[new_study] <<- max(
+      c(reported_metric_values.positive, reported_metric_values.negative),
+      na.rm=TRUE)
+    MinReportedMetricValues[new_study] <<- min(
+      c(reported_metric_values.positive, reported_metric_values.negative),
+      na.rm=TRUE)
     inputs <- appendDataFrameColumns(inputs, prefix='input')
     
     Inputs[new_study, ] <<-
       inputs[1, -which(names(inputs) %in% c('inputStudy', 'inputConfig'))]
-    TP[new_study] <<- round(bm$TP, 1)
-    FP[new_study] <<- round(bm$FP, 1)
-    FN[new_study] <<- round(bm$FN, 1)
-    TN[new_study] <<- round(bm$TN, 1)
-    Sn[new_study] <<- round(bm$Sn, 1)
+    # TP[new_study] <<- round(bm$TP, 1)
+    # FP[new_study] <<- round(bm$FP, 1)
+    # FN[new_study] <<- round(bm$FN, 1)
+    # TN[new_study] <<- round(bm$TN, 1)
+    # Sn[new_study] <<- round(bm$Sn, 1)
+    fTP[new_study] <<- bm$TP
+    fFP[new_study] <<- bm$FP
+    fFN[new_study] <<- bm$FN
+    fTN[new_study] <<- bm$TN
+    fSn[new_study] <<- bm$Sn
+    
+    resultsP <- integerClassBaseMeasures(bm$TP, bm$FN, inputs$inputP)
+    TP[new_study] <<- resultsP[1]
+    FN[new_study] <<- resultsP[2]
+    
+    resultsN <- integerClassBaseMeasures(bm$TN, bm$FP, inputs$inputN)
+    TN[new_study] <<- resultsN[1]
+    FP[new_study] <<- resultsN[2]
+    
+    Sn[new_study] <<- TP[new_study]+FP[new_study]+FN[new_study]+TN[new_study]
+    
     # FIX HERE:
     # round(TP, 0) + round(FN, 0) + 1 == P => TP <<- ceil(TP), FN <<- ceil(FN)
     # round(TN, 0) + round(FP, 0) + 1 == N => TN <<- ceil(TN), FP <<- ceil(FP)
@@ -655,9 +796,10 @@ addStudyBaseMeasures <- function(bm, study, config, inputs,
 #' None
 initParsedMetrics <- function(survey)
 {
-  TP <<- FP <<- FN <<- TN <<- Sn <<-
+  fTP <<- fFP <<- fFN <<- fTN <<- fSn <<- TP <<- FP <<- FN <<- TN <<- Sn <<-
     Possibilities <<- Config <<- DeltaSn <<-
-    ReportedMetricValues <<- ReportedMetrics <<- numeric()
+    ReportedMetricValues <<- ReportedMetrics <<- AverageReportedMetricValues <<-
+    MaxReportedMetricValues <<- MinReportedMetricValues <<- numeric()
   Study <<- InstrumentCombination <<- Consistency <<- LogInconsistencies <<-
     character()
   Inputs <<- appendDataFrameColumns(
@@ -684,7 +826,7 @@ initParsedMetrics <- function(survey)
 # survey <- rclip()
 ## Set problematic metrics as NA
 ##   (for example the ones cause exceptions in initParsedMetrics)
-# survey$F1[94] <- NA
+# survey$F1[93] <- NA
 ## if o studies are included:
 # survey$F1[120] <- NA
 # survey$F1[121] <- NA
@@ -838,8 +980,12 @@ revealConfusionMatrixes <- function(survey, add_inconsistent_BMs=TRUE)
     }
   }
   
-  return (data.frame(Study, Config, Inputs, ReportedMetrics,
-                     ReportedMetricValues, Possibilities, InstrumentCombination,
-                     TP, FP, FN, TN, Sn, InputSn=Inputs$inputN+Inputs$inputP,
+  return (data.frame(Study, Config, Inputs,
+                     ReportedMetrics, ReportedMetricValues,
+                     MinReportedMetricValues,
+                     AverageReportedMetricValues, MaxReportedMetricValues,
+                     Possibilities, InstrumentCombination,
+                     fTP, fFP, fFN, fTN, fSn, TP, FP, FN, TN, Sn,
+                     InputSn=Inputs$inputN+Inputs$inputP,
                      Consistency, DeltaSn))
 }
