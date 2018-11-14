@@ -1,6 +1,6 @@
 # TasKar, A Research Compedium of "New Means of Calculation and Representation of The Entire Binary-Classification Performance Instruments"
 ## Submitted to IEEE Computation Intelligence Magazine (CIM)
-* ![TasKar_v2_3.ods](TasKar_v2_3.ods) – Binary-Classification Performance Instruments Dashboard/Calculator/Visualizer*
+* ![TasKar.ods](TasKar.ods) – Binary-Classification Performance Instruments Dashboard/Calculator/Visualizer*
 * with novel ![TasKarMissing.R](TasKarMissing.R) R Script to Reveal Confusion Matrix from a few metrics 
 
 ![](images/TasKarDashboard_Demo.gif)
