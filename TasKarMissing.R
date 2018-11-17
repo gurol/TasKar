@@ -1,5 +1,5 @@
 #' TasKar – Binary Classification Performance Calculator/Dashboard (Missing Metrics Calculator) 
-#' Copyright (C) 2017-2018 Gürol Canbek  
+#' Copyright (C) 2016-2018 Gürol Canbek  
 #' This file is licensed under
 #' 
 #'   GNU Affero General Public License v3.0, GNU AGPLv3 
