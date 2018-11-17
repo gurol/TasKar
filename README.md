@@ -19,8 +19,13 @@ I hope that TasKar becomes a standard tool for calculating and expressing binary
 
 Please, contact and/or inform me for further usage on TasKar.
 
-Gürol Canbek
-October 13th, 2018
+Gürol Canbek, October 13th, 2018
+
+## Abstract
+This study takes a close look at binary-classification performance instruments that are based on the four basic values in a confusion matrix, namely true positives/negatives and false positives/negatives and enhances their representation by establishing a well-grounded interpretation of the performance evaluation fundamentals. We proposed a common textual formatting scheme to improve the readability and comprehensibility of performance instruments’ representation. A compact dashboard is provided online to calculate and visualize total 56 performance instruments (26 measures, 30 metrics) by entering confusion matrix for the first time. Seeing the limited approaches in confusion matrix visualization, we also devised three new graphics to visualize true/false positive/negative rates, positive/negative predictive values, and false discovery/omission rates performance metrics. Lastly, we have introduced some equations to reveal the original confusion matrix of a classification study that reported a few metrics. We used the equations to reveal and evaluate the entire performance of the 43 academic studies (2012–2018) in Android malware classification. Calculating the performance in terms of other metrics might detect the confirmation/publication biases. We expect that the proposed methods and tools will assist the researchers in computation, interpretation, and representation of classification performance.
+
+## Keywords
+Classification, performance metrics, confusion matrix, visualization, publication bias
 
 **NOTES**:
 1) TasKar is prepared as a OpenDocument Spreadsheet file and tested with LibreOffice Calc (v2.3).
