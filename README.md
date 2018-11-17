@@ -1,4 +1,4 @@
-# TasKar – Binary Classification Performance Calculator/Dashboard
+# TasKar – Binary Classification Performance Dashboard/Calculator
 ## A Research Compedium of "New Means of Calculation and Representation of The Entire Binary-Classification Performance Instruments"
 ### Submitted to IEEE Computation Intelligence Magazine (CIM)
 * ![TasKar.ods](TasKar.ods) – Binary-Classification Performance Instruments Calculator/Dashboard/Visualizer*
