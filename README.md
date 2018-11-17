@@ -1,12 +1,12 @@
 # TasKar – Binary Classification Performance Dashboard/Calculator
 ### A Research Compedium of "New Means of Calculation and Representation of The Entire Binary-Classification Performance Instruments"
 #### Submitted to IEEE Computation Intelligence Magazine (CIM)
-* ![TasKar.ods](TasKar.ods) – Binary-Classification Performance Instruments Calculator/Dashboard/Visualizer*
+* ![TasKar.ods](TasKar.ods) – Binary-Classification Performance Instruments Calculator/Dashboard/Visualizer\*
 * with novel ![TasKarMissing.R](TasKarMissing.R) Missing Metrics Calculator (R Script to Reveal Confusion Matrix and then all the other metrics from a few given measures/metrics)
 
 ![](images/TasKarDashboard_Demo.gif)
 
-* Best viewed with [LibreOffice](https://www.libreoffice.org/download/libreoffice-fresh/).
+\* Best viewed with [LibreOffice](https://www.libreoffice.org/download/libreoffice-fresh/).
 
 Classification performance, which is very important in machine learning, states the success state of a classifier implementing a specific algorithm. Binary classifications or two-class classifications separate a given input into two opposite classes such as 'presence' vs. 'absence' of a disease (healthy) or a condition, 'spam' vs. 'non-spam' for an e-mail, and 'malign' vs. 'benign' software.
 
