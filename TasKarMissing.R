@@ -1,16 +1,25 @@
-#' # TasKar - Missing Metrics Revealer
-#' @author Gürol Canbek, <gurol44@gmail.com>  
-#' Copyright (C) 2017-2018 Gürol CANBEK  
+#' TasKar – Binary Classification Performance Calculator/Dashboard (Missing Metrics Calculator) 
+#' Copyright (C) 2017-2018 Gürol Canbek  
 #' This file is licensed under
 #' 
-#'   A p a c h e   L i c e n s e   2 . 0 
+#'   GNU Affero General Public License v3.0, GNU AGPLv3 
 #' 
-#' A permissive license whose main conditions require preservation of copyright
-#' and license notices. Contributors provide an express grant of patent rights.
-#' Licensed works, modifications, and larger works may be distributed under
-#' different terms and without source code.
+#' This program is free software: you can redistribute it and/or modify
+#' it under the terms of the GNU Affero General Public License as published
+#' by the Free Software Foundation, either version 3 of the License, or
+#' (at your option) any later version.
+#'
+#' This program is distributed in the hope that it will be useful,
+#' but WITHOUT ANY WARRANTY; without even the implied warranty of
+#' MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#' GNU Affero General Public License for more details.
+#'
+#' You should have received a copy of the GNU Affero General Public License
+#' along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #' 
 #' See the license file in <https://github.com/gurol/taskar>
+#'
+#' @author Gürol Canbek, <gurol44@gmail.com> 
 #' @references <http://gurol.canbek.com>  
 #' @keywords utilities, common functions  
 #' @title Missing Metrics Revealer
