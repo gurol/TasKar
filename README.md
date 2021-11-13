@@ -1,6 +1,7 @@
 # TasKar – Binary-Classification Performance Dashboard/Calculator
-### A Research Compedium of "New Means of Calculation and Representation of The Entire Binary-Classification Performance Instruments"
-#### Submitted to IEEE Computation Intelligence Magazine (CIM)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2021--11--13-brightgreen.svg)](https://github.com/gurol/TasKar) [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)  [![ORCiD](https://img.shields.io/badge/ORCiD-0000--0002--9337--097X-green.svg)](https://orcid.org/0000-0002-9337-097X)
+### A Research Compedium of "TasKar: A research and education tool for calculation and representation of binary classification performance instruments"
+#### IEEE 14th International Conference on Information Security and Cryptology, 2-3 December 2021
 * ![TasKar.ods](TasKar.ods) – Binary-Classification Performance Instruments Calculator/Dashboard/Visualizer\*
 * with novel ![TasKarMissing.R](TasKarMissing.R) Missing Metrics Calculator (R Script to Reveal Confusion Matrix and then all the other metrics from a few given measures/metrics)
 
@@ -14,23 +15,23 @@ TasKar is a handy visually supported compact calculator to see the performance o
 
 Just input the four measures (***TP***, ***TN***, ***FP***, ***FN***) and TasKar calculates the entire performance measures and metrics.
 
-TasKar calculates and shows 56 measures/metrics including True Positive Rate (*TPR*), Accuracy (*ACC*), Balanced Accuracy (*BACC*), *G*, *F1*, Normalized Mutual Information (*nMI*), Cohen's Kappa (*CK*), and Mathews Correlation Coefficient (*MCC*).
+TasKar calculates and shows the ultimate set of (65) measures/metrics including True Positive Rate (*TPR*), Accuracy (*ACC*), Balanced Accuracy (*BACC*), *G*, *F1*, Normalized Mutual Information (*nMI*), Cohen's Kappa (*CK*), and Mathews Correlation Coefficient (*MCC*). Three new graphics were devised to visualize true/false positive/negative rates (*TPR*, *FPR*, *TNR*, *FNR*), positive/negative predictive values (*PPV*, *NPV*), and false discovery/omission rates (*FDR*, *FOR*) performance metrics.
 
-I hope that TasKar becomes a standard tool for calculating and expressing binary classification performances as well as using in machine learning education and trainings.
+I hope that TasKar becomes a handy tool for calculating and expressing binary classification performances as well as using in machine learning education and trainings.
 
 Please, contact and/or inform me for further usage on TasKar.
 
-Gürol Canbek, October 13th, 2018
+Gürol Canbek, October 13th, 2018 - December 2nd, 2021
 
 ## Abstract
-This study takes a close look at binary-classification performance instruments that are based on the four basic values in a confusion matrix, namely true positives/negatives and false positives/negatives and enhances their representation by establishing a well-grounded interpretation of the performance evaluation fundamentals. We proposed a common textual formatting scheme to improve the readability and comprehensibility of performance instruments’ representation. A compact dashboard is provided online to calculate and visualize total 56 performance instruments (26 measures, 30 metrics) by entering confusion matrix for the first time. Seeing the limited approaches in confusion matrix visualization, we also devised three new graphics to visualize true/false positive/negative rates, positive/negative predictive values, and false discovery/omission rates performance metrics. Lastly, we have introduced some equations to reveal the original confusion matrix of a classification study that reported a few metrics. We used the equations to reveal and evaluate the entire performance of the 43 academic studies (2012–2018) in Android malware classification. Calculating the performance in terms of other metrics might detect the confirmation/publication biases. We expect that the proposed methods and tools will assist the researchers in computation, interpretation, and representation of classification performance.
+This study covers almost the ultimate set of binary-classification performance instruments derived from four dimensions of a confusion matrix, namely true positives/negatives and false positives/negatives and enhances their representation by establishing a meaningful interpretation of the dimensions. A common textual formatting scheme is provided to improve the readability and comprehensibility of performance instruments’ representation. A compact dashboard (named ‘TasKar’, the abbreviation of ‘Tasnif Karnesi’, ‘Classification Report’ in Turkish) is developed and provided online to calculate and visualize a total of 52 performance instruments (27 measures, 23 metrics, and 2 indicators) by entering confusion matrix elements only. Taking parametric, variant, and recently proposed instruments the number covered becomes 65. Despite the limited approaches in confusion matrix visualization in the literature, three new graphics were devised to visualize true/false positive/negative rates (*TPR*, *FPR*, *TNR*, *FNR*), positive/negative predictive values (*PPV*, *NPV*), and false discovery/omission rates (*FDR*, *FOR*) performance metrics. It is expected that the proposed method and tool will be used by researchers in computation, interpretation, and standardized representation of classification performance as well as by teachers and students in machine learning education.
 
 ## Keywords
-Classification, performance metrics, confusion matrix, visualization, publication bias
+binary classification, performance evaluation, performance metrics, confusion matrix, visualization, publication bias
 
 **NOTES**:
-1) TasKar is prepared as a OpenDocument Spreadsheet file and tested with LibreOffice Calc (v2.3).
+1) TasKar is prepared as a OpenDocument Spreadsheet file and tested with LibreOffice Calc (v2.7).
 2) Please, cite our study if you use TasKar in your academic studies as
-   Gürol Canbek, Seref Sagiroglu, and Tugba Taskaya Temizel, *New Means of Calculation and Representation of The Entire Binary-Classification Performance Instruments*, IEEE Computational Intelligence Magazine (CIM), (Submitted), November 2018, https://github.com/gurol/taskar
+   Gürol Canbek, Tugba Taskaya Temizel, and Seref Sagiroglu, *TasKar: A research and education tool for calculation and representation of binary classification performance instruments*, IEEE 14th International Conference on Information Security and Cryptology (ISCTurkey), 2-3 December 2021, Ankara.
 3) Please, check this repository for updates and the references.
-4) See also: G. Canbek, S. Sagiroglu, T. T. Temizel, and N. Baykal, “Binary classification performance measures/metrics: A comprehensive visualized roadmap to gain new insights,” in *2017 International Conference on Computer Science and Engineering (UBMK)*, Antalya: IEEE, 2017, pp. 821–826. [Full Text](https://www.researchgate.net/publication/320829355_Binary_Classification_Performance_MeasuresMetrics_A_comprehensive_visualized_roadmap_to_gain_new_insights)
+4) Gürol Canbek, Tugba Taskaya Temizel, and Seref Sagiroglu (2021). BenchMetrics: A systematic benchmarking method for binary-classification performance metrics. *Neural Computing and Applications*, 33(21), 14623–14650. https://doi.org/10.1007/s00521-021-06103-6
