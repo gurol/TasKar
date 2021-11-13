@@ -5,7 +5,7 @@
 * ![TasKar.ods](TasKar.ods) – Binary-Classification Performance Instruments Calculator/Dashboard/Visualizer\*
 * with novel ![TasKarMissing.R](TasKarMissing.R) Missing Metrics Calculator (R Script to Reveal Confusion Matrix and then all the other metrics from a few given measures/metrics)
 
-![](images/TasKarDashboard_Demo.gif)
+![](images/TasKar_v2_7_Demo.mp4)
 
 \* Best viewed with [LibreOffice](https://www.libreoffice.org/download/libreoffice-fresh/).
 
