@@ -5,9 +5,9 @@
 * ![TasKar.ods](TasKar.ods) – Binary-Classification Performance Instruments Calculator/Dashboard/Visualizer\*
 * with novel ![TasKarMissing.R](TasKarMissing.R) Missing Metrics Calculator (R Script to Reveal Confusion Matrix and then all the other metrics from a few given measures/metrics)
 
-https://user-images.githubusercontent.com/14318443/141648107-a4a68899-689c-4687-8e55-5e3338ab2611.mp4
+https://user-images.githubusercontent.com/14318443/142153110-7a0a22e9-5a60-430f-8963-61a230719b88.mp4
 
-\* Best viewed with [LibreOffice](https://www.libreoffice.org/download/libreoffice-fresh/).
+* Best viewed with free [Libre Office](https://www.libreoffice.org/download/download/) or [Apache Open Office](https://www.openoffice.org/download/index.html).
 
 Classification performance, which is very important in machine learning, states the success state of a classifier implementing a specific algorithm. Binary classifications or two-class classifications separate a given input into two opposite classes such as 'presence' vs. 'absence' of a disease (healthy) or a condition, 'spam' vs. 'non-spam' for an e-mail, and 'malign' vs. 'benign' software.
 
